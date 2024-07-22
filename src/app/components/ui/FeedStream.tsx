@@ -1,0 +1,113 @@
+'use client'
+
+import React from 'react';
+import styled from 'styled-components';
+import FacebookFeed, { FacebookFeedProps, Post } from './feeds/FacebookFeed';
+import ProductFeed, { ProductFeedProps, Product } from './feeds/ProductFeed';
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 16px 0;
+
+  @media (max-width: 320px) {
+    width: 100%; /* Full width on smartwatches */
+  }
+
+  @media (max-width: 768px) {
+    width: 100%; /* Full width on mobile phones */
+  }
+
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
+
+  @media (min-width: 1024px) {
+    justify-content: center; /* Center content on iPad Pro */
+  }
+
+  @media (min-width: 1224px) {
+    justify-content: center;
+  }
+
+  @media (min-width: 1824px) {
+    justify-content: center;
+  }
+`;
+
+// Define posts array
+const posts: Post[] = [
+  {
+    username: 'John Doe',
+    avatarUrl: 'https://via.placeholder.com/40',
+    timestamp: '2 hours ago',
+    content: 'This is an example of a Facebook-like post component. It includes user information, post content, and interaction buttons.',
+    imageUrl: 'https://via.placeholder.com/600x400',
+  },
+  {
+    username: 'John Doe 1',
+    avatarUrl: 'https://via.placeholder.com/40',
+    timestamp: '2 hours ago',
+    content: 'This is an example of a Facebook-like post component. It includes user information, post content, and interaction buttons.',
+    imageUrl: 'https://via.placeholder.com/600x400',
+  },
+];
+
+// Define products array
+const products: Product[] = [
+  {
+    id: 1,
+    name: 'Awesome Sneakers',
+    price: 99.99,
+    description: 'Comfortable sneakers for everyday wear.',
+    imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
+  },
+  {
+    id: 2,
+    name: 'Awesome Luh',
+    price: 99.99,
+    description: 'Comfortable sneakers for everyday wear.',
+    imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
+  },
+  {
+    id: 3,
+    name: 'Nhek Luh',
+    price: 99.99,
+    description: 'Comfortable sneakers for everyday wear.',
+    imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
+  },
+];
+
+type ComponentData = 
+  | { id: number; component: React.FC<FacebookFeedProps>; props: FacebookFeedProps }
+  | { id: number; component: React.FC<ProductFeedProps>; props: ProductFeedProps };
+
+// Create componentsData using the arrays
+const componentsData: ComponentData[] = [
+  ...posts.map((post, index) => ({
+    id: index + 1, 
+    component: FacebookFeed, 
+    props: { post }
+  })),
+  ...products.map((product, index) => ({
+    id: index + 1 + posts.length, 
+    component: ProductFeed, 
+    props: { product }
+  })),
+];
+
+const FeedStream: React.FC = () => {
+  return (
+    <Container>
+      {componentsData.map((item) => {
+        const ComponentToRender = item.component;
+        return <ComponentToRender key={item.id} {...item.props} />;
+      })}
+    </Container>
+  );
+};
+
+export default FeedStream;
