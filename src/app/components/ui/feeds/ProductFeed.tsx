@@ -1,18 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface Product {
-  id: number;
-  name: string;
-  price: number;
-  description: string;
-  imageUrl: string;
-}
-
-interface ProductFeedProps {
-  product: Product;
-}
-
 const PostContainer = styled.div`
   background: #fff;
   border: 1px solid #ddd;
@@ -46,15 +34,23 @@ const ProductPrice = styled.p`
   color: #333; /* Darker color for price */
 `;
 
-const ProductFeed: React.FC<ProductFeedProps> = ({ product }) => (
+
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  description: string;
+  imageUrl: string;
+}
+
+const ProductFeed: React.FC<Product> = ({ id, name, price, description, imageUrl }) => (
   <PostContainer>
-    <ProductImage src={product.imageUrl} alt={product.name} />
-    <ProductName>{product.name}</ProductName>
-    <ProductDescription>{product.description}</ProductDescription>
-    <ProductPrice>${product.price.toFixed(2)}</ProductPrice>
+    <ProductImage src={imageUrl} alt={name} />
+    <ProductName>{name}</ProductName>
+    <ProductDescription>{description}</ProductDescription>
+    <ProductPrice>${price.toFixed(2)}</ProductPrice>
     {/* Add buttons for adding to cart, etc. */}
   </PostContainer>
 );
 
 export default ProductFeed;
-export type { ProductFeedProps, Product };

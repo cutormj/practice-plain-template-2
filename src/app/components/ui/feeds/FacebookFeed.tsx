@@ -1,18 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface Post {
-  username: string;
-  avatarUrl: string;
-  timestamp: string;
-  content: string;
-  imageUrl: string;
-}
-
-interface FacebookFeedProps {
-  post: Post;
-}
-
 const PostContainer = styled.div`
   background: #fff;
   border: 1px solid #ddd;
@@ -74,6 +62,7 @@ const PostImage = styled.img`
 
   @media (max-width: 768px) {
     width: 100%; /* Full width on mobile phones */
+    
   }
 
   @media (max-width: 320px) {
@@ -107,21 +96,29 @@ const Icon = styled.span`
   margin-right: 8px;
 `;
 
-const FacebookFeed: React.FC<FacebookFeedProps> = ({ post }) => (
+interface Post {
+  username: string;
+  avatarUrl: string;
+  timestamp: string;
+  content: string;
+  imageUrl: string;
+}
+
+const FacebookFeed: React.FC<Post> = ({ username, avatarUrl, timestamp, content, imageUrl }) => (
   <PostContainer>
     <PostHeader>
       <AvatarWrapper>
-        <Avatar src={post.avatarUrl} alt={`${post.username}'s avatar`} />
+        <Avatar src={avatarUrl} alt={`${username}'s avatar`} />
       </AvatarWrapper>
       <UserInfo>
-        <UserName>{post.username}</UserName>
-        <PostTime>{post.timestamp}</PostTime>
+        <UserName>{username}</UserName>
+        <PostTime>{timestamp}</PostTime>
       </UserInfo>
     </PostHeader>
-    <PostContent>{post.content}</PostContent>
-    {post.imageUrl && (
+    <PostContent>{content}</PostContent>
+    {imageUrl && (
       <PostImageWrapper>
-        <PostImage src={post.imageUrl} alt="Post" />
+        <PostImage src={imageUrl} alt="Post" />
       </PostImageWrapper>
     )}
     <PostActions>
@@ -139,4 +136,3 @@ const FacebookFeed: React.FC<FacebookFeedProps> = ({ post }) => (
 );
 
 export default FacebookFeed;
-export type { FacebookFeedProps, Post };
