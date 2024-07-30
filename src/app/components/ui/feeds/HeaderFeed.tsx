@@ -18,10 +18,6 @@ const Container = styled.div`
   justify-content: center;
   text-align: center;
   padding: 16px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 0 auto;
 `;
