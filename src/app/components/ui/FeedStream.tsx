@@ -47,12 +47,29 @@ const componentData = [
     type: 'SocialMediaFeed',
     props: {
       links: [
-        { title: 'Twitter', url: 'https://twitter.com', icon: 'your-twitter-icon' },
-        { title: 'LinkedIn', url: 'https://linkedin.com', icon: 'your-linkedin-icon' },
+        { 
+          title: 'Twitter', 
+          url: 'https://twitter.com', 
+          icon: 'your-twitter-icon' 
+          
+        },
+        { 
+          title: 'LinkedIn', 
+          url: 'https://linkedin.com', 
+          icon: 'your-linkedin-icon' 
+          
+        },
+        
+        {
+          title: 'Facebook',
+          url: 'https://www.facebook.com',
+          icon: '#'
+        },
         // Add more social media links as needed
       ],
     },
   },
+
 
   {
     type: 'FacebookFeed',
