@@ -5,7 +5,7 @@
 import styled from 'styled-components';
 import Header from './components/ui/Header';
 import FeedStream from './components/ui/FeedStream';
-import SocialMedias from './components/SocialMedias'; // Adjust the path as necessary
+import SocialMedias from './components/ui/SocialMedias'; // Adjust the path as necessary
 
 const socialMediaData = [
   { title: 'Facebook', url: 'https://facebook.com', icon: '/path/to/facebook-icon.png' },
@@ -38,6 +38,10 @@ export default function Home() {
       <ContentWrapper>
         {/* Your content goes here */}
         <Header />
+        <div>
+    <h1>Follow Us</h1>
+    <SocialMedias socialMedias={socialMediaData} />
+  </div>
         {/* <FeedStream /> */}
         <FeedStream />
       </ContentWrapper>
