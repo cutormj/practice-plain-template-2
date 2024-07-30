@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FacebookFeed from './feeds/FacebookFeed';
 import ProductFeed from './feeds/ProductFeed';
+import SocialMediaFeed from './feeds/SocialMediaFeed';
 
 const Container = styled.div`
   display: flex;
