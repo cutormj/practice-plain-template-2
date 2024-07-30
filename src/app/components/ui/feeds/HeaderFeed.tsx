@@ -17,8 +17,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 16px;
-  max-width: 600px;
+  padding: 32px;
   margin: 0 auto;
 `;
 
