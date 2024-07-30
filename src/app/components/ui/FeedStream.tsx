@@ -4,7 +4,6 @@ import React from 'react';
 import styled from 'styled-components';
 import FacebookFeed from './feeds/FacebookFeed';
 import ProductFeed from './feeds/ProductFeed';
-import SocialMediaFeed from './feeds/SocialMediaFeed';
 
 const Container = styled.div`
   display: flex;
@@ -53,17 +52,6 @@ const componentData = [
   },
 
   {
-    type: 'SocialMediaFeed',
-    props: {
-      socialMediaData: [
-        { title: 'Facebook', url: 'https://facebook.com', icon: '/path/to/facebook-icon.png' },
-        { title: 'Twitter', url: 'https://twitter.com', icon: '/path/to/twitter-icon.png' },
-        { title: 'Instagram', url: 'https://instagram.com', icon: '/path/to/instagram-icon.png' },
-      ]
-    }
-  },
-
-  {
     type: 'FacebookFeed',
     props: {
       username: 'Mark Joseph',
@@ -99,7 +87,6 @@ const componentData = [
 const componentMap: { [key: string ]: React.FC<any>} = {
   FacebookFeed,
   ProductFeed,
-
 };
 
 
