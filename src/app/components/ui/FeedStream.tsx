@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import FacebookFeed from './feeds/FacebookFeed';
 import ProductFeed from './feeds/ProductFeed';
 import SocialMediaFeed from './feeds/SocialMediaFeed';
+import HeaderFeed from './feeds/HeaderFeed';
 
 const Container = styled.div`
   display: flex;
@@ -41,6 +42,16 @@ const Container = styled.div`
 
 // Raw Data
 const componentData = [
+
+  {
+    type: 'HeaderFeed',
+    props: {
+      profilePictureAvatar: 'https://via.placeholder.com/40',
+      displayName: 'Mark Joseph,
+      bio: 'This is my Bio',
+    }
+  },
+
   {
     type: 'SocialMediaFeed',
     props: {
@@ -115,6 +126,7 @@ const componentMap: { [key: string ]: React.FC<any>} = {
   FacebookFeed,
   ProductFeed,
   SocialMediaFeed,
+  HeaderFeed,
 };
 
 const FeedStream: React.FC = () => {
