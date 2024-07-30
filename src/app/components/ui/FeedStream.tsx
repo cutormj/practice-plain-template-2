@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import FacebookFeed from './feeds/FacebookFeed';
 import ProductFeed from './feeds/ProductFeed';
+import SocialMediaFeed from './feeds/SocialMediaFeed';
 
 const Container = styled.div`
   display: flex;
@@ -88,34 +89,6 @@ const componentMap: { [key: string ]: React.FC<any>} = {
   FacebookFeed,
   ProductFeed,
 };
-
-
-
-
-// Define products array
-// const products: Product[] = [
-//   {
-//     id: 1,
-//     name: 'Awesome Sneakers',
-//     price: 99.99,
-//     description: 'Comfortable sneakers for everyday wear.',
-//     imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
-//   },
-//   {
-//     id: 2,
-//     name: 'Awesome Luh',
-//     price: 99.99,
-//     description: 'Comfortable sneakers for everyday wear.',
-//     imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
-//   },
-//   {
-//     id: 3,
-//     name: 'Nhek Luh',
-//     price: 99.99,
-//     description: 'Comfortable sneakers for everyday wear.',
-//     imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
-//   },
-// ];
 
 const FeedStream: React.FC = () => {
   return (
