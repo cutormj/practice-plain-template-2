@@ -29,9 +29,6 @@ export default function Home() {
   return (
     <MainWrapper>
       <ContentWrapper>
-        {/* Your content goes here */}
-        <Header />
-        {/* <FeedStream /> */}
         <FeedStream />
       </ContentWrapper>
     </MainWrapper>
