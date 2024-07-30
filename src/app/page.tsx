@@ -5,13 +5,6 @@
 import styled from 'styled-components';
 import Header from './components/ui/Header';
 import FeedStream from './components/ui/FeedStream';
-import SocialMedias from './components/ui/SocialMedias'; // Adjust the path as necessary
-
-const socialMediaData = [
-  { title: 'Facebook', url: 'https://facebook.com', icon: '/path/to/facebook-icon.png' },
-  { title: 'Twitter', url: 'https://twitter.com', icon: '/path/to/twitter-icon.png' },
-  { title: 'Instagram', url: 'https://instagram.com', icon: '/path/to/instagram-icon.png' },
-];
 
 const MainWrapper = styled.main`
   width: 100%;
@@ -38,10 +31,6 @@ export default function Home() {
       <ContentWrapper>
         {/* Your content goes here */}
         <Header />
-        <div>
-    <h1>Follow Us</h1>
-    <SocialMedias socialMedias={socialMediaData} />
-  </div>
         {/* <FeedStream /> */}
         <FeedStream />
       </ContentWrapper>
