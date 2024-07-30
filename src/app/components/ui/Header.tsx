@@ -37,7 +37,7 @@ const Avatar = styled.img`
 const Header: React.FC = () => {
   return (
     <HeaderContainer>
-      <Avatar src="https://via.placeholder.com/40" alt="Avatar" />
+      <Avatar src="https://via.placeholder.com/40" alt="Avatar" /> Testing
     </HeaderContainer>
   );
 };
