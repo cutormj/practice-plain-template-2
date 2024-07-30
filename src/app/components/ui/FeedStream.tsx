@@ -86,7 +86,8 @@ const componentData = [
 // Map Component type to the actual component
 const componentMap: { [key: string ]: React.FC<any>} = {
   FacebookFeed,
-  ProductFeed
+  ProductFeed,
+  SocialMediaFeed
 };
 
 
