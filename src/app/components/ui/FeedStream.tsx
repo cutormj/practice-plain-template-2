@@ -58,7 +58,7 @@ const componentData = [
         {
           title: 'Facebook',
           url: 'https://www.facebook.com',
-          icon: '#'
+          icon: 'https://img.icons8.com/?size=100&id=118497&format=png&color=000000'
         },
         // Add more social media links as needed
       ],
