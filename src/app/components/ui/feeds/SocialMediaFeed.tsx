@@ -1,62 +1,54 @@
 "use client";
 
+// SocialMediaFeed.tsx
+
 import React from 'react';
 import styled from 'styled-components';
 
-const SocialMediaContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  padding: 16px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-`;
-
-const SocialMediaItem = styled.a`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: inherit;
-  padding: 8px;
-  transition: transform 0.2s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
-const Icon = styled.img`
-  width: 40px;
-  height: 40px;
-  margin-bottom: 8px;
-`;
-
-const Title = styled.span`
-  font-size: 14px;
-  font-weight: bold;
-`;
-
-interface SocialMedia {
+interface SocialMediaLink {
   title: string;
   url: string;
   icon: string;
 }
 
-interface SocialMediasProps {
-  socialMedias: SocialMedia[];
+interface SocialMediaFeedProps {
+  links: SocialMediaLink[];
 }
 
-const SocialMediaFeed: React.FC<SocialMediasProps> = ({ socialMedias }) => (
-  <SocialMediaContainer>
-    {socialMedias.map((socialMedia, index) => (
-      <SocialMediaItem key={index} href={socialMedia.url} target="_blank" rel="noopener noreferrer">
-        <Icon src={socialMedia.icon} alt={socialMedia.title} />
-        <Title>{socialMedia.title}</Title>
-      </SocialMediaItem>
+const FeedContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+`;
+
+const LinkItem = styled.a`
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #0070f3;
+  }
+
+  svg {
+    margin-right: 8px;
+  }
+`;
+
+const SocialMediaFeed: React.FC<SocialMediaFeedProps> = ({ links }) => (
+  <FeedContainer>
+    {links.map((link) => (
+      <LinkItem key={link.title} href={link.url} target="_blank" rel="noopener noreferrer">
+        {/* Replace with your actual icons */}
+        <svg width="24" height="24" viewBox="0 0 24 24">
+          <path d={link.icon} />
+        </svg>
+        {link.title}
+      </LinkItem>
     ))}
-  </SocialMediaContainer>
+  </FeedContainer>
 );
 
 export default SocialMediaFeed;
