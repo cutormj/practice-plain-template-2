@@ -41,25 +41,20 @@ const Container = styled.div`
 
 // Raw Data
 const componentData = [
-
-
-{
+  {
     type: 'SocialMediaFeed',
     props: {
       links: [
         { 
           title: 'Twitter', 
           url: 'https://twitter.com', 
-          icon: 'your-twitter-icon' 
-          
+          icon: 'your-twitter-icon'
         },
         { 
           title: 'LinkedIn', 
           url: 'https://linkedin.com', 
-          icon: 'your-linkedin-icon' 
-          
+          icon: 'your-linkedin-icon'
         },
-        
         {
           title: 'Facebook',
           url: 'https://www.facebook.com',
@@ -69,8 +64,7 @@ const componentData = [
       ],
     },
   },
-
-
+  
   {
     type: 'FacebookFeed',
     props: {
@@ -82,7 +76,6 @@ const componentData = [
     }
   },
 
-
   {
     type: 'FacebookFeed',
     props: {
@@ -93,6 +86,7 @@ const componentData = [
       imageUrl: 'https://via.placeholder.com/600x400',
     }
   },
+  
   {
     type: 'ProductFeed',
     props: { 
@@ -103,6 +97,7 @@ const componentData = [
       imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
     }
   },
+  
   {
     type: 'ProductFeed',
     props: { 
@@ -110,7 +105,7 @@ const componentData = [
       name: 'Awesome Sneakers',
       price: 99.99,
       description: 'Comfortable sneakers for everyday wear.',
-      imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
+      imageUrl: 'https://via.placeholder.com/600x400',
     }
   }
 ];
