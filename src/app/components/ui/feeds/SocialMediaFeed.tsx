@@ -17,12 +17,12 @@ interface SocialMediaFeedProps {
 
 const FeedContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
   gap: 16px;
 `;
 
 const LinkItem = styled.a`
   display: flex;
+  flex-direction: column;
   align-items: center;
   text-decoration: none;
   color: #333;
@@ -33,7 +33,7 @@ const LinkItem = styled.a`
   }
 
   svg {
-    margin-right: 8px;
+    margin-bottom: 8px;
   }
 `;
 
@@ -44,11 +44,11 @@ const SocialMediaFeed: React.FC<SocialMediaFeedProps> = ({ links }) => (
         {/* Replace with your actual icons */}
         <svg width="24" height="24" viewBox="0 0 24 24">
           <path d={link.icon} />
-        </svg>{link.title}
+        </svg>
+        {link.title}
       </LinkItem>
     ))}
   </FeedContainer>
 );
 
 export default SocialMediaFeed;
-
