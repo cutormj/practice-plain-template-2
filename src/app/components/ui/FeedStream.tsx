@@ -55,14 +55,13 @@ const componentData = [
   {
     type: 'SocialMediaFeed',
     props: {
-      socialMediaData = [
-  { title: 'Facebook', url: 'https://facebook.com', icon: '/path/to/facebook-icon.png' },
-  { title: 'Twitter', url: 'https://twitter.com', icon: '/path/to/twitter-icon.png' },
-  { title: 'Instagram', url: 'https://instagram.com', icon: '/path/to/instagram-icon.png' },
-];
+      socialMediaData: [
+        { title: 'Facebook', url: 'https://facebook.com', icon: '/path/to/facebook-icon.png' },
+        { title: 'Twitter', url: 'https://twitter.com', icon: '/path/to/twitter-icon.png' },
+        { title: 'Instagram', url: 'https://instagram.com', icon: '/path/to/instagram-icon.png' },
+      ]
     }
-
-  }
+  },
 
   {
     type: 'FacebookFeed',
