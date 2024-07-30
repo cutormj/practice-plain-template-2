@@ -88,6 +88,7 @@ const componentData = [
 const componentMap: { [key: string ]: React.FC<any>} = {
   FacebookFeed,
   ProductFeed,
+  SocialMediaFeed,
 };
 
 const FeedStream: React.FC = () => {
