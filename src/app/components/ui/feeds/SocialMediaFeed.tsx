@@ -44,7 +44,7 @@ const SocialMediaFeed: React.FC<SocialMediaFeedProps> = ({ links }) => (
         {/* Replace with your actual icons */}
         <svg width="24" height="24" viewBox="0 0 24 24">
           <path d={link.icon} />
-        </svg>
+        </svg>{link.title}
       </LinkItem>
     ))}
   </FeedContainer>
