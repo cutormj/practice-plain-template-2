@@ -8,7 +8,7 @@ import styled from 'styled-components';
 interface SocialMediaLink {
   title: string;
   url: string;
-  icon: string;
+  iconUrl: string; // New property for the icon image URL
 }
 
 interface SocialMediaFeedProps {
@@ -32,8 +32,10 @@ const LinkItem = styled.a`
     color: #0070f3;
   }
 
-  svg {
+  img {
     margin-bottom: 8px;
+    width: 24px; // Adjust the size as needed
+    height: 24px;
   }
 `;
 
@@ -41,10 +43,7 @@ const SocialMediaFeed: React.FC<SocialMediaFeedProps> = ({ links }) => (
   <FeedContainer>
     {links.map((link) => (
       <LinkItem key={link.title} href={link.url} target="_blank" rel="noopener noreferrer">
-        {/* Replace with your actual icons */}
-        <svg width="24" height="24" viewBox="0 0 24 24">
-          <path d={link.icon} />
-        </svg>
+        <img src={link.iconUrl} alt={link.title} />
         {link.title}
       </LinkItem>
     ))}
