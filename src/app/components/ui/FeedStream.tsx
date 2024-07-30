@@ -46,7 +46,7 @@ const componentData = [
   {
     type: 'HeaderFeed',
     props: {
-      profilePictureAvatar: 'https://via.placeholder.com/40',
+      profilePictureAvatar: 'profile.jpg',
       displayName: 'Mark Joseph',
       bio: 'This is my Bio',
     }
