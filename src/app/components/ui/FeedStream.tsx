@@ -49,6 +49,13 @@ const componentData = [
       profilePictureBackground: 'profile2.JPG',
       displayName: 'Joseph',
       bio: '"I possess keys that unlock nothing, and a space that holds no room. You can enter, but you can never leave."',
+      icons: [
+      "https://img.icons8.com/?size=100&id=118497&format=png&color=000000",
+      "https://img.icons8.com/?size=100&id=32323&format=png&color=000000",
+      "https://img.icons8.com/?size=100&id=19318&format=png&color=000000",
+      "https://img.icons8.com/?size=100&id=118640&format=png&color=000000",
+      "https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
+    ]
     }
   },
 
@@ -61,29 +68,36 @@ const componentData = [
   //   }
   // },
 
-  // {
-  //   type: 'SocialMediaFeed',
-  //   props: {
-  //     links: [
-  //       { 
-  //         title: 'Twitter', 
-  //         url: 'https://twitter.com', 
-  //         icon: 'your-twitter-icon'
-  //       },
-  //       { 
-  //         title: 'LinkedIn', 
-  //         url: 'https://linkedin.com', 
-  //         icon: 'your-linkedin-icon'
-  //       },
-  //       {
-  //         title: 'Facebook',
-  //         url: 'https://www.facebook.com',
-  //         icon: 'https://img.icons8.com/?size=100&id=118497&format=png&color=000000'
-  //       },
-  //       // Add more social media links as needed
-  //     ],
-  //   },
-  // },
+  {
+    type: 'SocialMediaFeed',
+    props: {
+      icons: [
+        "https://img.icons8.com/?size=100&id=118497&format=png&color=000000",
+        "https://img.icons8.com/?size=100&id=32323&format=png&color=000000",
+        "https://img.icons8.com/?size=100&id=19318&format=png&color=000000",
+        "https://img.icons8.com/?size=100&id=118640&format=png&color=000000",
+        "https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
+      ],
+      links: [
+        { 
+          title: 'Twitter', 
+          url: 'https://twitter.com', 
+          icon: 'your-twitter-icon'
+        },
+        { 
+          title: 'LinkedIn', 
+          url: 'https://linkedin.com', 
+          icon: 'your-linkedin-icon'
+        },
+        {
+          title: 'Facebook',
+          url: 'https://www.facebook.com',
+          icon: 'https://img.icons8.com/?size=100&id=118497&format=png&color=000000'
+        },
+        // Add more social media links as needed
+      ],
+    },
+  },
   
   {
     type: 'FacebookFeed',
@@ -96,38 +110,39 @@ const componentData = [
     }
   },
 
-  {
-    type: 'FacebookFeed',
-    props: {
-      username: 'Mark Joseph',
-      avatarUrl: 'https://via.placeholder.com/40',
-      timestamp: '2 hours ago',
-      content: 'This is an example of a Facebook-like post component. It includes user information, post content, and interaction buttons.',
-      imageUrl: 'https://via.placeholder.com/600x400',
-    }
-  },
+  // {
+  //   type: 'FacebookFeed',
+  //   props: {
+  //     username: 'Mark Joseph',
+  //     avatarUrl: 'https://via.placeholder.com/40',
+  //     timestamp: '2 hours ago',
+  //     content: 'This is an example of a Facebook-like post component. It includes user information, post content, and interaction buttons.',
+  //     imageUrl: 'https://via.placeholder.com/600x400',
+  //   }
+  // },
   
-  {
-    type: 'ProductFeed',
-    props: { 
-      id: 1,
-      name: 'Awesome Sneakers',
-      price: 99.99,
-      description: 'Comfortable sneakers for everyday wear.',
-      imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
-    }
-  },
+  // {
+  //   type: 'ProductFeed',
+  //   props: { 
+  //     id: 1,
+  //     name: 'Awesome Sneakers',
+  //     price: 99.99,
+  //     description: 'Comfortable sneakers for everyday wear.',
+  //     imageUrl: 'https://via.placeholder.com/600x400', // Replace with the actual image URL
+  //   }
+  // },
   
-  {
-    type: 'ProductFeed',
-    props: { 
-      id: 1,
-      name: 'Awesome Sneakers',
-      price: 99.99,
-      description: 'Comfortable sneakers for everyday wear.',
-      imageUrl: 'https://via.placeholder.com/600x400',
-    }
-  }
+  // {
+  //   type: 'ProductFeed',
+  //   props: { 
+  //     id: 1,
+  //     name: 'Awesome Sneakers',
+  //     price: 99.99,
+  //     description: 'Comfortable sneakers for everyday wear.',
+  //     imageUrl: 'https://via.placeholder.com/600x400',
+  //   }
+  // }
+  
 ];
 
 // Map Component type to the actual component

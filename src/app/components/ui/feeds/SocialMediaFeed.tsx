@@ -1,53 +1,53 @@
+// SimpleHeroFeed.tsx
 "use client";
-
-// SocialMediaFeed.tsx
-
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
-interface SocialMediaLink {
-  title: string;
-  url: string;
-  iconUrl: string; // New property for the icon image URL
-}
-
 interface SocialMediaFeedProps {
-  links: SocialMediaLink[];
+  profilePictureBackground: string;
+  displayName: string;
+  bio: string;
+  icons: string[]; // Array of icon URLs
 }
 
-const FeedContainer = styled.div`
+
+const Container = styled.div`
   display: flex;
-  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+
 `;
 
-const LinkItem = styled.a`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.2s;
 
-  &:hover {
-    color: #0070f3;
-  }
+
+const IconsHolder = styled.div`
+  position: absolute;
+  bottom: 16px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px; /* Space between icons */
 
   img {
-    margin-bottom: 8px;
-    width: 24px; // Adjust the size as needed
+    width: 24px; /* Adjust size as needed */
     height: 24px;
   }
 `;
 
-const SocialMediaFeed: React.FC<SocialMediaFeedProps> = ({ links }) => (
-  <FeedContainer>
-    {links.map((link) => (
-      <LinkItem key={link.title} href={link.url} target="_blank" rel="noopener noreferrer">
-        <img src={link.iconUrl} alt={link.title} />
-        {link.title}
-      </LinkItem>
-    ))}
-  </FeedContainer>
-);
+const SocialMediaFeed: React.FC<SocialMediaFeedProps> = ({ profilePictureBackground, displayName, bio, icons }) => {
+
+
+  return (
+      <Container>
+        <IconsHolder>
+          {icons.map((icon, index) => (
+            <img key={index} src={icon} alt={`icon-${index}`} />
+          ))}
+        </IconsHolder>
+      </Container>
+  );
+};
 
 export default SocialMediaFeed;
