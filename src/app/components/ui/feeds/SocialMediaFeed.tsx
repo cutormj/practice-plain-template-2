@@ -1,15 +1,17 @@
-// SimpleHeroFeed.tsx
 "use client";
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
-interface SocialMediaFeedProps {
-  profilePictureBackground: string;
-  displayName: string;
-  bio: string;
-  icons: string[]; // Array of icon URLs
+interface Link {
+  icon: string;
+  title: string;
+  url: string; // Add URL property
 }
 
+interface SocialMediaFeedProps {
+  icons: string[]; // Array of icon URLs
+  links: Link[];
+}
 
 const Container = styled.div`
   display: flex;
@@ -17,10 +19,7 @@ const Container = styled.div`
   justify-content: center;
   text-align: center;
   position: relative;
-
 `;
-
-
 
 const IconsHolder = styled.div`
   position: absolute;
@@ -28,25 +27,46 @@ const IconsHolder = styled.div`
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 8px; /* Space between icons */
+  gap: 16px; /* Space between links */
 
-  img {
-    width: 24px; /* Adjust size as needed */
-    height: 24px;
+  
+    @media (max-width: 768px) {
+        font-size: 0.6em;
+      }
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+
+    img {
+      width: 32px; /* Adjust size as needed */
+      height: 32px;
+
+      @media (max-width: 768px) {
+        width: 16px; /* Adjust size for mobile */
+        height: 16px;
+      }
+    }
+
+    code {
+      margin-left: 8px; /* Space between icon and title */
+    }
   }
 `;
 
-const SocialMediaFeed: React.FC<SocialMediaFeedProps> = ({ profilePictureBackground, displayName, bio, icons }) => {
-
-
+const SocialMediaFeed: React.FC<SocialMediaFeedProps> = ({ icons, links }) => {
   return (
-      <Container>
-        <IconsHolder>
-          {icons.map((icon, index) => (
-            <img key={index} src={icon} alt={`icon-${index}`} />
-          ))}
-        </IconsHolder>
-      </Container>
+    <Container>
+      <IconsHolder>
+        {links.map((link, index) => (
+          <a key={index} href={link.url} target="_blank" rel="noopener noreferrer">
+            <img src={link.icon} alt={`icon-${index}`} />
+            <code>{link.title}</code>
+          </a>
+        ))}
+      </IconsHolder>
+    </Container>
   );
 };
 

@@ -80,17 +80,17 @@ const componentData = [
       ],
       links: [
         { 
-          title: 'Twitter', 
+          title: '@mark.it.up', 
           url: 'https://twitter.com', 
-          icon: 'your-twitter-icon'
+          icon: 'https://img.icons8.com/?size=100&id=32323&format=png&color=000000'
         },
         { 
-          title: 'LinkedIn', 
+          title: '@markjoseph', 
           url: 'https://linkedin.com', 
-          icon: 'your-linkedin-icon'
+          icon: 'https://img.icons8.com/?size=100&id=13930&format=png&color=000000'
         },
         {
-          title: 'Facebook',
+          title: '@markjoseph',
           url: 'https://www.facebook.com',
           icon: 'https://img.icons8.com/?size=100&id=118497&format=png&color=000000'
         },

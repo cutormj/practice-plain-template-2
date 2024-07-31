@@ -21,7 +21,6 @@ const Container = styled.div<{ background: string }>`
   text-align: center;
   position: relative;
 
-  @media (max-width: 768px) {
     &::after {
       content: '';
       position: absolute;
@@ -31,8 +30,8 @@ const Container = styled.div<{ background: string }>`
       height: 40%; /* Adjust the height as needed */
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     }
-  }
 
+   
 `;
 
 
@@ -45,23 +44,22 @@ const TextContainer = styled.div`
   flex-direction: column;
   align-items: center;
   
+        
     font-size: 0.9em;
 
     @media (max-width: 768px) {
     top: 32px;
     font-size: 0.5em
   }
+
     
 `;
 
     const DisplayName = styled.h2`
     font-weight: bold;
-    margin: 0;
     `;
 
     const Bio = styled.p`
-    color: #333; /* Darker color for bio */
-    //   margin: 32px 0 0 0; /* Adjust margin as needed */
     font-weight: normal; /* Bold font for bio */
     `;
 
