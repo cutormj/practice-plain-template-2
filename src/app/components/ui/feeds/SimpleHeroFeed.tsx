@@ -35,30 +35,30 @@ const Container = styled.div<{ background: string }>`
 
 const TextContainer = styled.div`
   position: absolute;
-  bottom: 16px; /* Adjust as needed */
+  top: 72px; /* Adjust as needed */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 768px) {
-    bottom: 32px;
+    @media (max-width: 768px) {
+    top: 32px;
   }
 `;
 
-const DisplayName = styled.h2`
-  font-weight: lighter;
-  margin: 0;
-  font-size: 1.25em; /* Adjust font size as needed */
-`;
+    const DisplayName = styled.h2`
+    font-weight: lighter;
+    margin: 0;
+    font-size: 0.5em; /* Adjust font size as needed */
+    `;
 
-const Bio = styled.p`
-  color: #333; /* Darker color for bio */
-  margin: 8px 0 0 0; /* Adjust margin as needed */
-  font-size: 1.5em; /* Larger font size for bio */
-  font-weight: normal; /* Normal font weight for bio */
-`;
+    const Bio = styled.p`
+    color: #333; /* Darker color for bio */
+    //   margin: 32px 0 0 0; /* Adjust margin as needed */
+    font-size: 0.5em; /* Larger font size for bio */
+    font-weight: normal; /* Bold font for bio */
+    `;
 
 const SimpleHeroFeed: React.FC<SimpleHeroFeedProps> = ({ profilePictureBackground, displayName, bio }) => {
   const [background, setBackground] = useState<string>('');
