@@ -99,16 +99,16 @@ const componentData = [
     },
   },
   
-  {
-    type: 'FacebookFeed',
-    props: {
-      username: 'John Doe',
-      avatarUrl: 'https://via.placeholder.com/40',
-      timestamp: '2 hours ago',
-      content: 'This is an example of a Facebook-like post component. It includes user information, post content, and interaction buttons.',
-      imageUrl: 'https://via.placeholder.com/600x400',
-    }
-  },
+  // {
+  //   type: 'FacebookFeed',
+  //   props: {
+  //     username: 'John Doe',
+  //     avatarUrl: 'https://via.placeholder.com/40',
+  //     timestamp: '2 hours ago',
+  //     content: ' interaction buttons.',
+  //     imageUrl: 'https://via.placeholder.com/600x400',
+  //   }
+  // },
 
   // {
   //   type: 'FacebookFeed',

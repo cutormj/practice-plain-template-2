@@ -13,7 +13,8 @@ const Container = styled.div<{ background: string }>`
   background-image: url(${props => props.background});
   background-size: cover;
   background-position: center;  
-  height: 40vh;
+  height: 50vh;
+  width: 100vw; /* Set width to 100% of the viewport width */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +32,9 @@ const Container = styled.div<{ background: string }>`
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
     }
   }
+
 `;
+
 
 const TextContainer = styled.div`
   position: absolute;
@@ -41,22 +44,24 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+    font-size: 0.9em;
 
     @media (max-width: 768px) {
     top: 32px;
+    font-size: 0.5em
   }
+    
 `;
 
     const DisplayName = styled.h2`
     font-weight: bold;
     margin: 0;
-    font-size: 0.5em; /* Adjust font size as needed */
     `;
 
     const Bio = styled.p`
     color: #333; /* Darker color for bio */
     //   margin: 32px 0 0 0; /* Adjust margin as needed */
-    font-size: 0.5em; /* Larger font size for bio */
     font-weight: normal; /* Bold font for bio */
     `;
 
