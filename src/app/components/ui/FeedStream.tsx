@@ -46,7 +46,7 @@ const componentData = [
   {
     type: 'SimpleHeroFeed',
     props: {
-      profilePictureBackground: 'profile2.jpg',
+      profilePictureBackground: 'profile2.JPG',
       displayName: '-Joseph',
       bio: '"I possess keys that unlock nothing, and a space that holds no room. You can enter, but you can never leave."',
     }
