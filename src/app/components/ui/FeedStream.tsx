@@ -6,6 +6,7 @@ import FacebookFeed from './feeds/FacebookFeed';
 import ProductFeed from './feeds/ProductFeed';
 import SocialMediaFeed from './feeds/SocialMediaFeed';
 import HeaderFeed from './feeds/HeaderFeed';
+import SimpleHeroFeed from './feeds/SimpleHeroFeed';
 
 const Container = styled.div`
   display: flex;
@@ -42,39 +43,47 @@ const Container = styled.div`
 
 // Raw Data
 const componentData = [
-
   {
-    type: 'HeaderFeed',
+    type: 'SimpleHeroFeed',
     props: {
-      profilePictureAvatar: 'profile.jpg',
-      displayName: 'Mark Joseph',
-      bio: 'This is my Bio',
+      profilePictureBackground: 'profile2.jpg',
+      displayName: 'Joseph',
+      bio: '"I possess keys that unlock nothing, and a space that holds no room. You can enter, but you can never leave."',
     }
   },
 
-  {
-    type: 'SocialMediaFeed',
-    props: {
-      links: [
-        { 
-          title: 'Twitter', 
-          url: 'https://twitter.com', 
-          icon: 'your-twitter-icon'
-        },
-        { 
-          title: 'LinkedIn', 
-          url: 'https://linkedin.com', 
-          icon: 'your-linkedin-icon'
-        },
-        {
-          title: 'Facebook',
-          url: 'https://www.facebook.com',
-          icon: 'https://img.icons8.com/?size=100&id=118497&format=png&color=000000'
-        },
-        // Add more social media links as needed
-      ],
-    },
-  },
+  // {
+  //   type: 'HeaderFeed',
+  //   props: {
+  //     profilePictureAvatar: 'profile.jpg',
+  //     displayName: 'Mark Joseph',
+  //     bio: 'This is my Bio',
+  //   }
+  // },
+
+  // {
+  //   type: 'SocialMediaFeed',
+  //   props: {
+  //     links: [
+  //       { 
+  //         title: 'Twitter', 
+  //         url: 'https://twitter.com', 
+  //         icon: 'your-twitter-icon'
+  //       },
+  //       { 
+  //         title: 'LinkedIn', 
+  //         url: 'https://linkedin.com', 
+  //         icon: 'your-linkedin-icon'
+  //       },
+  //       {
+  //         title: 'Facebook',
+  //         url: 'https://www.facebook.com',
+  //         icon: 'https://img.icons8.com/?size=100&id=118497&format=png&color=000000'
+  //       },
+  //       // Add more social media links as needed
+  //     ],
+  //   },
+  // },
   
   {
     type: 'FacebookFeed',
@@ -127,6 +136,7 @@ const componentMap: { [key: string ]: React.FC<any>} = {
   ProductFeed,
   SocialMediaFeed,
   HeaderFeed,
+  SimpleHeroFeed,
 };
 
 const FeedStream: React.FC = () => {
