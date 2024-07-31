@@ -48,7 +48,7 @@ const TextContainer = styled.div`
 `;
 
     const DisplayName = styled.h2`
-    font-weight: lighter;
+    font-weight: bold;
     margin: 0;
     font-size: 0.5em; /* Adjust font size as needed */
     `;
